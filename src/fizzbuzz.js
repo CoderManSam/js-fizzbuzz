@@ -15,23 +15,23 @@ function fizzBuzz(lower, upper) {
     }
 
 
-    for (let j = fizzBuzzArray[0]; j <= fizzBuzzArray.length; j++) {
+    for (let j = 0; j < fizzBuzzArray.length; j++) {
         
-        if (j % 3 === 0 && j % 5 !== 0) {
+        if (fizzBuzzArray[j] % 3 === 0 && fizzBuzzArray[j] % 5 !== 0) {
 
-            fizzBuzzArray.splice(j-1, 1, "Fizz")
-
-        }
-
-        else if (j % 5 === 0 && j % 3 !== 0) {
-
-            fizzBuzzArray.splice(j-1, 1, "Buzz")
+            fizzBuzzArray.splice(j, 1, "Fizz")
 
         }
 
-        else if (j % 3 === 0 && j % 5 === 0) {
+        else if (fizzBuzzArray[j] % 5 === 0 && fizzBuzzArray[j] % 3 !== 0) {
 
-            fizzBuzzArray.splice(j-1, 1, "FizzBuzz")
+            fizzBuzzArray.splice(j, 1, "Buzz")
+
+        }
+
+        else if (fizzBuzzArray[j] % 3 === 0 && fizzBuzzArray[j] % 5 === 0) {
+
+            fizzBuzzArray.splice(j, 1, "FizzBuzz")
             
         }
         
@@ -41,7 +41,7 @@ function fizzBuzz(lower, upper) {
     return fizzBuzzArray
 }
 
-console.log(fizzBuzz(1, 30))
+console.log(fizzBuzz(51, 54))
 
 
 // TODO: Change undefined below to the name of your function
