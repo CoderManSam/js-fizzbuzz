@@ -1,47 +1,39 @@
 // TODO: Write your function in this file
 
 function fizzBuzz(lower, upper) {
-
-    // lower = 1
-    // upper = 30
+    
 
     let fizzBuzzArray = []
 
 
     for (let i = lower; i <= upper; i++) {
+
+        if (i % 3 === 0 && i % 5 !== 0) {
+
+            fizzBuzzArray.push("Fizz")
+
+        }
+
+        else if (i % 5 === 0 && i % 3 !== 0) {
+
+            fizzBuzzArray.push("Buzz")
+
+        }
+
+        else if (i % 3 === 0 && i % 5 === 0) {
+
+            fizzBuzzArray.push("FizzBuzz")
+
+        }
         
-        fizzBuzzArray.push(i)
+        else fizzBuzzArray.push(i)
     
     }
 
+    return fizzBuzzArray    
+}      
 
-    for (let j = 0; j < fizzBuzzArray.length; j++) {
-        
-        if (fizzBuzzArray[j] % 3 === 0 && fizzBuzzArray[j] % 5 !== 0) {
-
-            fizzBuzzArray.splice(j, 1, "Fizz")
-
-        }
-
-        else if (fizzBuzzArray[j] % 5 === 0 && fizzBuzzArray[j] % 3 !== 0) {
-
-            fizzBuzzArray.splice(j, 1, "Buzz")
-
-        }
-
-        else if (fizzBuzzArray[j] % 3 === 0 && fizzBuzzArray[j] % 5 === 0) {
-
-            fizzBuzzArray.splice(j, 1, "FizzBuzz")
-            
-        }
-        
-    }        
-
-
-    return fizzBuzzArray
-}
-
-console.log(fizzBuzz(51, 54))
+console.log(fizzBuzz(3, 30))
 
 
 // TODO: Change undefined below to the name of your function
